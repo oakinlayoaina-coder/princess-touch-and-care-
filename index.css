@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
 
 :root {
-    color-scheme: light;
-    --ink: #292521;
-    --muted: #77716a;
-    --rose: #bd796e;
-    --rose-dark: #a76259;
-    --paper: #fbf8f5;
-    --cream: #f3ece5;
-    --line: #e8dfd7;
+    color-scheme: dark;
+    --ink: #f5eee9;
+    --muted: #c0b5ac;
+    --rose: #d39287;
+    --rose-dark: #e0a198;
+    --paper: #08080880;
+    --cream: #121212b9;
+    --line: #393331;
     font-family: 'DM Sans', sans-serif;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -85,7 +85,7 @@ a:focus-visible {
     display: flex;
     align-items: center;
     gap: 38px;
-    color: #514c46;
+    color: #e8ded8;
     font-size: 12px;
 }
 
@@ -96,14 +96,14 @@ a:focus-visible {
 
 .nav-cta {
     padding: 12px 17px;
-    border: 1px solid #d5c7bc;
+    border: 1px solid #62524e;
     border-radius: 2px;
     color: var(--ink);
     transition: background .2s ease, color .2s ease;
 }
 
 .nav-cta:hover {
-    color: white;
+    color: #080808ad;
     background: var(--ink);
 }
 
@@ -196,16 +196,16 @@ h2 em {
 
 .button-dark {
     color: white;
-    background: var(--ink);
+    background: #a76259;
 }
 
 .button-dark:hover {
-    background: var(--rose-dark);
+    background: #bd796e;
 }
 
 .text-link {
     padding-bottom: 4px;
-    border-bottom: 1px solid #cfc3b9;
+    border-bottom: 1px solid #5b4e49;
     font-size: 11px;
     font-weight: 600;
     transition: color .2s ease;
@@ -244,8 +244,8 @@ h2 em {
 .hero-photo {
     position: absolute;
     inset: 0 8% 0 0;
-    background-color: #e8d8ca;
-    background-image: linear-gradient(180deg, rgba(47, 36, 27, .02), rgba(47, 36, 27, .08)), url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1100&q=85');
+    background-color: #121212b6;
+    background-image: linear-gradient(180deg, rgba(47, 36, 27, .02), rgba(47, 36, 27, .08)), url('assets/hero-hairstyles.png');
     background-position: center;
     background-size: cover;
 }
@@ -259,8 +259,9 @@ h2 em {
     gap: 12px;
     min-width: 220px;
     padding: 17px 19px;
-    background: white;
-    box-shadow: 0 12px 35px #49352518;
+    color: var(--ink);
+    background: #171515ab;
+    box-shadow: 0 12px 35px #49352534;
 }
 
 .caption-icon {
@@ -306,7 +307,7 @@ h2 em {
     position: absolute;
     right: 2.5%;
     bottom: 88px;
-    color: #96877c;
+    color: #b8a69a;
     font-size: 8px;
     letter-spacing: 2px;
     line-height: 1.8;
@@ -315,7 +316,7 @@ h2 em {
 
 .welcome {
     padding: 86px 10% 70px;
-    background: #f3ece5;
+    background: var(--cream);
 }
 
 .welcome-label {
@@ -324,7 +325,7 @@ h2 em {
     gap: 13px;
     max-width: 1040px;
     margin: 0 auto 34px;
-    color: #81776e;
+    color: #c2b5aa;
     font-size: 9px;
     letter-spacing: 1.6px;
 }
@@ -362,7 +363,7 @@ h2 em {
     grid-template-columns: repeat(3, 1fr);
     max-width: 1040px;
     margin: 67px auto 0;
-    border-top: 1px solid #ded3c9;
+    border-top: 1px solid var(--line);
 }
 
 .values-row > div {
@@ -370,7 +371,7 @@ h2 em {
     align-items: center;
     gap: 14px;
     min-height: 65px;
-    color: #514b45;
+    color: #e8ded8;
     font-size: 10px;
 }
 
@@ -411,40 +412,22 @@ h2 em {
 
 .service-gallery {
     display: grid;
-    grid-template-columns: 1.15fr .85fr .85fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 15px;
     max-width: 1040px;
-    height: 245px;
     margin: 0 auto 31px;
 }
 
 .service-gallery img {
     display: block;
     width: 100%;
-    height: 100%;
+    max-width: 760px;
+    aspect-ratio: 1;
+    height: auto;
     object-fit: cover;
     object-position: center;
-    background: #f0e9e2;
-}
-
-.service-flyer-frame {
-    position: relative;
-    min-width: 0;
-    height: 245px;
-    overflow: hidden;
-    background: #f0e9e2;
-    container-type: size;
-}
-
-.service-gallery .service-flyer {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100cqh;
-    height: 100cqw;
-    max-width: none;
-    object-fit: contain;
-    transform: translate(-50%, -50%) rotate(-90deg);
+    background: #0c0c0ca5;
+    margin: 0 auto;
 }
 
 .service-list {
@@ -491,17 +474,196 @@ h2 em {
     margin: 28px auto 0;
 }
 
+.booking {
+    padding: 82px 10%;
+    background: var(--cream);
+}
+
+.booking-heading {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.booking-heading .eyebrow {
+    margin-bottom: 19px;
+}
+
+.booking-heading h2 {
+    font-size: clamp(40px, 4.5vw, 57px);
+    line-height: 1.15;
+}
+
+.booking-heading > p:last-child {
+    max-width: 410px;
+    margin: 16px 0 0;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.booking-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    max-width: 760px;
+    margin: 30px auto 0;
+}
+
+.booking-field {
+    display: grid;
+    gap: 8px;
+}
+
+.booking-field-full,
+.booking-note,
+.booking-status {
+    grid-column: 1 / -1;
+}
+
+.booking-field label {
+    color: var(--ink);
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.booking-field label span {
+    color: var(--muted);
+    font-weight: 400;
+}
+
+.booking-field input,
+.booking-field select,
+.booking-field textarea {
+    width: 100%;
+    min-height: 46px;
+    padding: 11px 13px;
+    border: 1px solid #49423e;
+    border-radius: 2px;
+    color: var(--ink);
+    background: #080808;
+    font: inherit;
+    font-size: 12px;
+    color-scheme: dark;
+}
+
+.booking-field textarea {
+    min-height: 94px;
+    resize: vertical;
+}
+
+.booking-field input:focus-visible,
+.booking-field select:focus-visible,
+.booking-field textarea:focus-visible,
+.booking-submit:focus-visible,
+.booking-whatsapp:focus-visible {
+    outline: 2px solid var(--rose-dark);
+    outline-offset: 3px;
+}
+
+.booking-note,
+.booking-status {
+    margin: 0;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.booking-submit,
+.booking-whatsapp {
+    width: fit-content;
+}
+
+.booking-whatsapp {
+    color: #080808;
+}
+
+.hairstyle-gallery {
+    display: grid;
+    grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+    align-items: center;
+    gap: 60px;
+    padding: 82px 10%;
+    background: var(--cream);
+}
+
+.hairstyle-gallery-copy {
+    max-width: 390px;
+    justify-self: end;
+}
+
+.hairstyle-gallery-copy .eyebrow {
+    margin-bottom: 19px;
+}
+
+.hairstyle-gallery-copy h2 {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 4.2vw, 54px);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.hairstyle-gallery-copy h2 em {
+    color: var(--rose-dark);
+    font-weight: 500;
+}
+
+.hairstyle-gallery-copy > p:last-child {
+    max-width: 330px;
+    margin: 18px 0 0;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.hairstyle-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 14px;
+    width: 100%;
+    max-width: 520px;
+    justify-self: start;
+}
+
+.hairstyle-gallery-photo {
+    min-width: 0;
+    margin: 0;
+}
+
+.hairstyle-gallery-photo img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    background: #e3d2c3;
+}
+
+.hairstyle-gallery-photo-wide {
+    grid-column: 1 / -1;
+}
+
+.hairstyle-gallery-photo-wide img {
+    aspect-ratio: 16 / 9;
+}
+
+.hairstyle-gallery-photo figcaption {
+    margin-top: 11px;
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: .04em;
+}
+
 .visit {
     display: grid;
     grid-template-columns: 1fr 1fr;
     min-height: 590px;
-    background: #322c28;
+    background: #0000007b;
 }
 
 .visit-photo {
     min-height: 590px;
     background-color: #e3d2c3;
-    background-image: url('https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1100&q=85');
+    background-image: url('assets/princess-touch-salon.png');
     background-position: center 38%;
     background-size: cover;
 }
@@ -534,7 +696,7 @@ h2 em {
     max-width: 310px;
     padding: 30px 0;
     margin: 7px 0 13px;
-    border-top: 1px solid #ffffff25;
+    border-top: 1px solid #ffffff3e;
     border-bottom: 1px solid #ffffff25;
 }
 
@@ -590,7 +752,7 @@ h2 em {
 }
 
 .button-light {
-    color: var(--ink);
+    color: #211b18a4;
     background: #fbf8f5;
 }
 
@@ -679,6 +841,12 @@ h2 em {
     }
 
     .services {
+        padding-right: 7%;
+        padding-left: 7%;
+    }
+
+    .hairstyle-gallery {
+        gap: 35px;
         padding-right: 7%;
         padding-left: 7%;
     }
@@ -780,10 +948,14 @@ h2 em {
 
     .values-row > div {
         min-height: 49px;
-        border-bottom: 1px solid #ded3c9;
+        border-bottom: 1px solid var(--line);
     }
 
     .services {
+        padding: 62px 7%;
+    }
+
+    .booking {
         padding: 62px 7%;
     }
 
@@ -800,20 +972,54 @@ h2 em {
         font-size: 45px;
     }
 
+    .booking-heading h2 {
+        font-size: 43px;
+    }
+
     .service-gallery {
-        grid-template-columns: 1fr 1fr;
-        height: auto;
+        grid-template-columns: minmax(0, 1fr);
         gap: 10px;
         margin-bottom: 24px;
     }
 
     .service-gallery img {
-        height: 165px;
+        max-width: 100%;
     }
 
-    .service-flyer-frame {
-        grid-column: 1 / -1;
-        height: 190px;
+    .hairstyle-gallery {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 62px 7%;
+    }
+
+    .hairstyle-gallery-copy {
+        max-width: none;
+        justify-self: auto;
+    }
+
+    .hairstyle-gallery-copy h2 {
+        font-size: 43px;
+    }
+
+    .hairstyle-gallery-grid {
+        max-width: 460px;
+        justify-self: center;
+    }
+
+    .booking-form {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .booking-field-full,
+    .booking-note,
+    .booking-status {
+        grid-column: auto;
+    }
+
+    .booking-submit,
+    .booking-whatsapp {
+        width: 100%;
     }
 
     .service-list {

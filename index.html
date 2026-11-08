@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#fbf8f5">
+    <meta name="theme-color" content="#080808">
     <meta name="description" content="Discover Princess Touch and Care, a beauty salon in Fratton, Portsmouth. Call 07759 048748 or plan your visit.">
     <title>Princess Touch and Care | Beauty Salon in Portsmouth</title>
     <link rel="preconnect" href="https://images.unsplash.com">
@@ -17,8 +17,9 @@
         </a>
         <nav class="main-nav" aria-label="Main navigation">
             <a href="#about">About us</a>
+            <a href="#hairstyles">Hairstyle gallery</a>
             <a href="#visit">Find us</a>
-            <a class="nav-cta" href="tel:+447759048748">Call the salon <span aria-hidden="true">↗</span></a>
+            <a class="nav-cta" href="#book">Book online <span aria-hidden="true">↗</span></a>
         </nav>
     </header>
 
@@ -38,7 +39,7 @@
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="hero-photo" role="img" aria-label="A calm, welcoming beauty salon"></div>
+                <div class="hero-photo" role="img" aria-label="Braided hairstyle inspiration from Princess Touch and Care"></div>
                 <div class="photo-caption">
                     <span class="caption-icon" aria-hidden="true">✳</span>
                     <span><strong>A warm welcome awaits</strong><small>Fratton, Portsmouth</small></span>
@@ -75,11 +76,7 @@
                 <p>Explore our hair, styling and care services. Not sure what you need? Call us and we’ll be happy to help.</p>
             </div>
             <div class="service-gallery" aria-label="Photos from Princess Touch and Care">
-                <img src="assets/hair-products.png" alt="Hair extensions and hair products available at the salon">
-                <img src="assets/hair-extensions.png" alt="A selection of hair extensions">
-                <div class="service-flyer-frame">
-                    <img class="service-flyer" src="assets/salon-services.png" alt="Princess Touch and Care salon services flyer">
-                </div>
+                <img src="assets/service-hairstyles.png" alt="Braids, extensions, bridal styles and other hairstyles at Princess Touch and Care" loading="lazy">
             </div>
             <div class="service-list">
                 <article class="service-card">
@@ -101,8 +98,78 @@
             <a class="button button-dark services-cta" href="tel:+447759048748">Ask about a service <span aria-hidden="true">↗</span></a>
         </section>
 
+        <section class="booking" id="book">
+            <div class="booking-heading">
+                <p class="eyebrow"><span class="eyebrow-line"></span> APPOINTMENT REQUESTS</p>
+                <h2>Let’s find a time<br><em>that works for you.</em></h2>
+                <p>Tell us what you’re looking for. We’ll confirm your appointment with you on WhatsApp.</p>
+            </div>
+            <form class="booking-form" id="booking-form" method="post">
+                <div class="booking-field">
+                    <label for="booking-name">Your name</label>
+                    <input id="booking-name" name="name" type="text" autocomplete="name" required>
+                </div>
+                <div class="booking-field">
+                    <label for="booking-phone">Your phone number</label>
+                    <input id="booking-phone" name="phone" type="tel" autocomplete="tel" required>
+                </div>
+                <div class="booking-field booking-field-full">
+                    <label for="booking-service">Service</label>
+                    <select id="booking-service" name="service" required>
+                        <option value="" selected disabled>Choose a service</option>
+                        <option>Styling &amp; occasions</option>
+                        <option>Extensions &amp; hair styling</option>
+                        <option>Hair &amp; beauty care</option>
+                        <option>Not sure yet</option>
+                    </select>
+                </div>
+                <div class="booking-field">
+                    <label for="booking-date">Preferred date</label>
+                    <input id="booking-date" name="date" type="date" required>
+                </div>
+                <div class="booking-field">
+                    <label for="booking-time">Preferred time</label>
+                    <input id="booking-time" name="time" type="time" required>
+                </div>
+                <div class="booking-field booking-field-full">
+                    <label for="booking-notes">Anything else we should know? <span>(optional)</span></label>
+                    <textarea id="booking-notes" name="notes" rows="3"></textarea>
+                </div>
+                <p class="booking-note">The salon is closed on Sundays. This is an appointment request, not a confirmed booking; your appointment is confirmed only after the salon replies.</p>
+                <button class="button button-dark booking-submit" type="submit">Prepare WhatsApp request <span aria-hidden="true">↗</span></button>
+                <a class="button button-light booking-whatsapp" id="booking-whatsapp" href="#" target="_blank" rel="noopener noreferrer" hidden>Open WhatsApp to send request <span aria-hidden="true">↗</span></a>
+                <p class="booking-status" id="booking-status" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="hairstyle-gallery" id="hairstyles">
+            <div class="hairstyle-gallery-copy">
+                <p class="eyebrow"><span class="eyebrow-line"></span> HAIRSTYLE GALLERY</p>
+                <h2>Find a look<br><em>that feels like you.</em></h2>
+                <p>Explore a style from Princess Touch and Care and get in touch to talk through your next look.</p>
+            </div>
+            <div class="hairstyle-gallery-grid">
+                <figure class="hairstyle-gallery-photo">
+                    <img src="assets/hairstyle-gallery.jpg" alt="Hair styling at Princess Touch and Care" loading="lazy">
+                    <figcaption>Hair styling at Princess Touch and Care</figcaption>
+                </figure>
+                <figure class="hairstyle-gallery-photo">
+                    <img src="assets/hairstyle-gallery-inspiration.png" alt="Nine hairstyle ideas, including braids, curls and updos" loading="lazy">
+                    <figcaption>Find a style that feels like you</figcaption>
+                </figure>
+                <figure class="hairstyle-gallery-photo hairstyle-gallery-photo-wide">
+                    <img src="assets/hairstyle-gallery-styles.png" alt="Braided, curly and protective hairstyle inspiration" loading="lazy">
+                    <figcaption>Braids, curls and protective styles</figcaption>
+                </figure>
+                <figure class="hairstyle-gallery-photo hairstyle-gallery-photo-wide">
+                    <img src="assets/hairstyle-gallery-classic.png" alt="Classic braided updos, cornrows and natural curls" loading="lazy">
+                    <figcaption>Classic braids and natural styles</figcaption>
+                </figure>
+            </div>
+        </section>
+
         <section class="visit" id="visit">
-            <div class="visit-photo" role="img" aria-label="Beauty and self-care details"></div>
+            <div class="visit-photo" role="img" aria-label="A hairstylist caring for a client at Princess Touch and Care"></div>
             <div class="visit-card">
                 <p class="eyebrow"><span class="eyebrow-line"></span> COME SAY HELLO</p>
                 <h2>We’re just<br><em>around the corner.</em></h2>
@@ -151,5 +218,39 @@
         <span>Beauty, with a personal touch.</span>
         <span>Fratton, Portsmouth · <a href="tel:+447759048748">07759 048748</a></span>
     </footer>
+    <script>
+        const bookingForm = document.querySelector('#booking-form');
+        const bookingDate = document.querySelector('#booking-date');
+        const whatsappLink = document.querySelector('#booking-whatsapp');
+        const bookingStatus = document.querySelector('#booking-status');
+        const today = new Date();
+        const localToday = new Date(today.getTime() - today.getTimezoneOffset() * 60000)
+            .toISOString()
+            .slice(0, 10);
+
+        bookingDate.min = localToday;
+
+        bookingForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const formData = new FormData(bookingForm);
+            const date = new Date(`${formData.get('date')}T00:00:00`);
+            const message = [
+                'Hello Princess Touch and Care, I would like to request an appointment.',
+                '',
+                `Name: ${formData.get('name')}`,
+                `Phone: ${formData.get('phone')}`,
+                `Service: ${formData.get('service')}`,
+                `Preferred date: ${date.toLocaleDateString('en-GB', { dateStyle: 'long' })}`,
+                `Preferred time: ${formData.get('time')}`,
+                formData.get('notes') ? `Additional details: ${formData.get('notes')}` : ''
+            ].filter(Boolean).join('\n');
+
+            whatsappLink.href = `https://wa.me/447759048748?text=${encodeURIComponent(message)}`;
+            whatsappLink.hidden = false;
+            bookingStatus.textContent = 'Your message is ready. Open WhatsApp and tap Send to submit your request; the salon will confirm availability.';
+            whatsappLink.focus();
+        });
+    </script>
 </body>
 </html>
